@@ -1,5 +1,5 @@
 # thesis-rolim
-Projeto desenvolvimento usando NodeJS + Typescript
+Projeto desenvolvido usando NodeJS + Typescript
 
 ### Pré-requisitos globais:
 `npm i -g nodemon typescript ts-node`
