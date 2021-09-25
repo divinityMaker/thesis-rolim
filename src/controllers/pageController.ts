@@ -1,7 +1,10 @@
 import { Request, Response } from 'express';
+import { userInfo } from 'os';
+import products from '../models/products';
 
 export const home = (req: Request, res: Response) => {
 
+    res.send('home no controller');
     //res.render('pages/page');
 }
 
