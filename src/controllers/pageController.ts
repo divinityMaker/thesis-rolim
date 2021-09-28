@@ -1,6 +1,4 @@
 import { Request, Response } from 'express';
-import { userInfo } from 'os';
-import products from '../models/products';
 
 export const home = (req: Request, res: Response) => {
 

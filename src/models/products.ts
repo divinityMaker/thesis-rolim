@@ -33,7 +33,7 @@ const productSchema = new Schema<productsType>({
         trim : true
     },
     tag : {
-        type : String,
+        type : Array,
         trim : true,
     }
 })
