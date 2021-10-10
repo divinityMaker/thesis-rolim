@@ -1,18 +1,33 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // [IMPORTS] \\
 import { Router } from 'express';
 import multer from 'multer';
 
-// MIDDLEWARE PARA PROCESSAR A FOTO.
-import * as multerConfig from '../middlewares/imageMiddleware';
+    // [MIDDLEWARES] \\
+import { multerConfig, resize } from '../middlewares/imageMiddleware'; 
 
-// IMPORTANDO OS CONTROLLERS.
+    // [CONTROLLERS] \\
 import * as storeController from '../controllers/storeController';
+import * as pageController from '../controllers/pageController';
 
-// DEFININDO O ROUTER.
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // [ROUTER] \\ 
 const adminRouter = Router();
 
-// CONFIGURANDO AS ROTAS.
-adminRouter.get('/admin/criar', storeController.create);
-adminRouter.post('/admin/criar', multer(multerConfig).single('photo'), storeController.createAction);
+    // [ROTAS] \\
+adminRouter.get('/admin', pageController.adminLogin)
 
-// EXPORTANDO AS ROTAS.
+adminRouter.get('/admin/criar', pageController.create); // PÁGINA DE CRIAÇÃO.
+adminRouter.post('/admin/criar', multer(multerConfig).single('photo'), // MULTER CONFIG.
+                                 resize, // MIDDLEWARE PARA DAR RESIZE NA FOTO.
+                                 storeController.createAction); // AÇÃO DE CRIAR PRODUTO.
+
+adminRouter.get('/admin/:slug/editar', pageController.edit); // PÁGINA DE EDIÇÃO.
+adminRouter.post('/admin/:slug/editar', storeController.editAction); // AÇÃO DE EDIÇÃO.
+
+adminRouter.post('/admin/:slug/deletar', storeController.deleteAction); // AÇÃO DE DELETAR.
+
+    // [EXPORTS] \\
 export default adminRouter;

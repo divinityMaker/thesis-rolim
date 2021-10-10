@@ -1,17 +1,18 @@
 import { Router } from 'express';
 
-// IMPORTANDO OS CONTROLLERS.
+    // CONTROLLERS.
 import * as pageController from '../controllers/pageController';
-import * as storeController from '../controllers/storeController';
 
-// DEFININDO O ROUTER.
+    // ROUTER.
 const router = Router();
 
-// CONFIGURANDO AS ROTAS.
+    // ROTAS.
 router.get('/', pageController.home);
-router.get('/produtos', storeController.store);
+router.get('/produtos', pageController.store);
 router.get('/nossa-loja', pageController.find);
 router.get('/sobre', pageController.about);
 
-// EXPORTANDO AS ROTAS.
+router.get('/produtos/:slug', pageController.individualPage);
+
+    // EXPORTANDO AS ROTAS.
 export default router;

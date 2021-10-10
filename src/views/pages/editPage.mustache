@@ -1,0 +1,27 @@
+<h2>Editar produto.</h2>
+
+<form method="POST">
+    <label>
+        Título:
+            <input type="text" name="tittle" value="{{produtos.tittle}}"/>
+    </label>
+    </br>
+    <label>
+        Corpo:
+            <textarea name="body">{{produtos.body}}</textarea>
+    </label>
+    </br>
+    <label>
+        Tags: <small>Separar por vírgula.</small>
+        <br/>
+        <input type="text" name="tag" value="{{produtos.tag}}"/>
+    </label>
+    </br>
+    <input type="submit" value="Salvar">
+</form>
+
+<form method="POST" action="./deletar">
+
+<input type="submit" value="apagar">
+
+</form>

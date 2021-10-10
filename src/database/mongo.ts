@@ -3,11 +3,12 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+    // FUNÇÃO QUE FAZ A CONEXÃO AO DATABASE.
 export const mongoConnect = async () => {
     try{
         console.log("Conectando ao database...");
         await connect(process.env.MONGO_URL as string);
-        console.log("MongoDB conectado com sucesso");
+        console.log("Conectado ao database com sucesso.");
     } catch(error) {
         console.log("Ocorreu um erro de conexão ao database:", error);
     }

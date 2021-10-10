@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rolim</title>
+    {{^menu.products}}<link rel="stylesheet" href="assets/CSS/navbar.css">{{/menu.products}}
+    {{#menu.home}}
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+    <link rel="stylesheet" href="assets/CSS/index.css">
+    {{/menu.home}}
+    {{#menu.products}}
+    <link rel="stylesheet" href="assets/CSS/storeNavbar.css">
+    <link rel="stylesheet" href="assets/CSS/store.css">
+    {{/menu.products}}
+    <link rel="stylesheet" href="assets/CSS/mobile.css">
+</head>
+<body>
+<header>
+    <div class="nav-container">
+        <nav class="nav">
+            <a href="/" class="logo">ROLIMSOM.</a>
+            <ul class="nav-list">
+                <li>
+                    <a href="/" class="nav-link">Início</a>
+                </li>
+                <li>
+                    <a href="/produtos" class="nav-link">Produtos</a>
+                </li>
+                <li>
+                    <a href="/nossa-loja" class="nav-link">Lojas</a>
+                </li>
+                <li>
+                    <a href="/sobre" class="nav-link">Sobre</a>
+                </li>
+                <ul class="nav-medias">
+                    <li class="fb">
+                        <a href="https://www.facebook.com/RolimInstrumentosMusicais"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="inst">
+                        <a href="https://www.instagram.com/rolim.musical/"><i class="fab fa-instagram"></i></a>
+                    </li>   
+                    <li>
+                        <a href="https://api.whatsapp.com/send?1=pt_br&phone=+5514997836917"><i class="fab fa-whatsapp"></i></a>
+                    </li>
+                    {{#menu.products}}
+                    <div class="search-box">
+                        <button class="btn-search"><i class="fas fa-search"></i></button>
+                        <input type="text" class="input-search" placeholder="Type to Search...">
+                    </div>
+                    {{/menu.products}}
+                </ul>
+            </ul>
+            <div class="mobile-menu">
+            </div>
+        </nav>
+    </div>
+</header>

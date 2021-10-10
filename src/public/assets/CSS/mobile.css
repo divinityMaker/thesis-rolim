@@ -1,0 +1,345 @@
+@media screen and (max-width: 1024px ){ 
+
+    
+    header{
+        background: #000;
+    }
+
+    .containermodels{
+        position: absolute;
+    }
+
+    .demo-content{
+        padding-top: 7vh;
+    }
+
+    .modelos{
+        position: relative;
+        transition: none;
+        transform: none;
+        margin-left: 0;
+        margin-right: 0;
+        box-shadow: none;
+        width: 100vw;
+        padding: 25px; 
+        top: 10vh;
+    }
+
+    .modelos:hover{
+        transform: none;
+        transition: none;
+        box-shadow: none; 
+    }
+    
+    .prevbutton{
+        display: block;
+        position: absolute;
+        font-size: 4vh;
+        top: 50vh;
+        left: 10vw;
+        z-index: 999;
+    }
+    
+    .nextbutton{
+        display: block;
+        position: absolute;
+        font-size: 4vh;
+        left: 84vw;
+        top: 50vh;
+        text-decoration: none;
+        z-index: 998;
+    }
+    
+    
+    .prevbutton a, .nextbutton a{
+        text-decoration: none;
+        padding: 1.5vh 1.5vw;
+        color: #fff;
+        background-color: #3f3f3fea;
+        border-radius: 10%;
+    }
+   
+    .prevbutton a:hover, .nextbutton a:hover{
+        color: #fff;
+        background-color: #3f3f3fc0;
+    }
+
+    .carousel__item{
+        display: none;
+
+    }
+
+    .carousel__item--visible{
+        display: block;
+    }
+
+    .nav-medias{
+        position: static;
+    }
+
+    .nav-list {
+        position: absolute;
+        display: none;
+        top: 10rem;
+        right: 0;
+        width: 55vw;
+        height: 90vh;
+        background: #05060f;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: transform 0.3s ease-in;
+        opacity: 0;
+        z-index: 3;
+    }
+
+
+    .active{
+        display: flex;
+    }
+
+    .nav-list.active {
+        opacity: 100%;
+        animation-name: flow;
+        animation-duration: 0.2s;
+    }
+
+    .nav-list.active .nav{
+        background: #000;
+    }
+
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .scrolling-active .nav-list {
+        background: #fff;
+        top: 9.5vh;
+        height: 95vh;
+    }
+
+    .mobile-menu{
+        position: absolute;
+        right: 35px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+        color: #fff;
+    }
+    
+    .mobile-menu::before{
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background: #fff;
+        transition: 0.2s;
+        transform: translateY(-10px);
+        box-shadow: 0 10px 0 #fff;
+    }
+    
+    .mobile-menu::after{
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background: #fff;
+        transition: 0.2s;
+        transform: translateY(10px);
+    }
+    
+    .mobile-menu.active{
+        background-color: #f7226a;
+    }
+    
+    .mobile-menu.active::before{
+        transform: translateY(0px) rotate(45deg);
+        box-shadow: 0 0 0 #fff;
+    
+    }
+    
+    .mobile-menu.active::after{
+        transform: translateY(0px) rotate(-45deg);
+        box-shadow: 0 0 0 #fff;
+    }
+
+    .sublogo a{
+        font-size: 1.5rem;
+    }
+    
+    .sublogo p{
+        font-size: 1rem;
+    }
+
+    .modelstittle h1{
+        font-size: 3rem;
+    }
+    
+    .modelstittle p{
+        position: relative;
+        top: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .mail a{
+        position: relative;
+        font-size: 1.3rem;
+    }
+    
+    .phone a{
+        font-size: 1.3rem;
+    }
+
+    
+
+
+    /* SESSÃO DE REVENDEDORES */
+
+
+.modelstittle h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+.modelstittle p{
+    position: relative;
+    top: 2rem;
+    font-size: 1.8rem;
+}
+
+
+.lojatittle{
+    position: relative;
+    top: 4rem;
+    width: 100vw;
+    height: 22rem;
+    background: #050303;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.lojatittle a{
+    color: #fff;
+    font-size: 7rem;
+    position: relative;
+    left: 0;
+    top: 2vh;
+}
+
+.lojatittle h1{
+    position: relative;
+    left: 0;
+    top: 5vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: default;  
+}
+
+.lojatittle h2{
+    position: relative;
+    left: 0;
+    top: 5vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: default;  
+}
+
+
+.lojatittle p{
+    position: relative;
+    left: 0;
+    right: 1vw;
+    top: 5vh;
+    font-size: 1.7rem;
+    color: #cfcfcf;
+    cursor: default; 
+    text-align: center;
+}
+
+.buttonloja {
+    position: relative;
+    top: 5rem;
+    right: 0;
+    text-align: center;
+    box-shadow: 3px 4px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #000000 5%, #030000 100%);
+	background-color:#000000;
+	border-radius:18px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size: 2rem;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #000000;
+
+    transition: transform 1s;
+    transform: scale(1); 
+}
+
+.buttonloja:hover{
+    transition: none;
+    transform: none; 
+}
+
+
+
+.copyright{
+    height: 8rem;
+    text-align: center;
+    background: #151515;
+}
+
+.copyright a{
+    font-size: 1.5rem;
+}
+
+/* FIM DA SESSÃO DE REVENDEDORES */
+
+}
+
+@keyframes fadeVisibility {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: opacity ;
+    }
+  }
+
+  @keyframes flow{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes navLinkFade{
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+

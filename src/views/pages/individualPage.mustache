@@ -1,0 +1,13 @@
+<h1>{{produtos.tittle}}</h1>
+
+<article>{{produtos.body}}</article>
+
+{{#produtos}}
+    {{#photo}}
+    <img src="/uploads/{{photo}}"/>
+    {{/photo}}
+    <h3><a href="/produtos/{{slug}}">{{tittle}}</a></h3>
+    <p>{{body}}</p>
+    <a href="/admin/{{slug}}/editar">[ editar ]</a>
+    <hr/>
+{{/produtos}}

@@ -1,28 +1,50 @@
 import { Request, Response } from 'express';
 import productSchema from '../models/products';
 
-export const store = (req: Request, res: Response) => {
-
-    //res.render('pages/page');
-}
-
-export const create = (req: Request, res: Response) => {
-    res.render('pages/storeAdd');
-};
-
-//Cria um produto e o adiciona no banco de dados.
+//  CRIAR PRODUTO.
 export const createAction = async (req: Request, res: Response) => {
-//Formatando as tags para não quebrar o DB.       
-    req.body.tag = req.body.tag.split(',').map((item: string) => item.trim()); 
+    //   FORMATA AS TAGS PARA UM ARRAY.
+    req.body.tag = req.body.tag.split(',').map((item: string) => item.trim());
+    //  CRIA O SCHEMA COM OS VALORES PASSADO NO FORMULÁRIO. 
     const create = new productSchema(req.body);
-//Em caso de erro, será notificado pelo try/catch.
-    try{
-        await create.save();
-    }catch(error) {
+
+    try {
+        await create.save(); // SALVA O SCHEMA COM OS VALORES NO DATABASE.
+    } catch (error) {
         console.log("Produto não foi adicionado.", error);
         return res.redirect('/admin/criar');
     };
-            //Caso tudo de certo, será redirecionado para a aba /produtos.
+
     console.log("Produto adicionado com sucesso.");
+    res.redirect('/produtos');
+};
+
+//  EDITAR PRODUTO.
+export const editAction = async (req: Request, res: Response) => {
+
+    req.body.slug = require('slug')(req.body.tittle, { lower: true });
+    req.body.tag = req.body.tag.split(',').map((item: string) => item.trim());
+
+    try {
+        await productSchema.updateOne(
+            { slug: req.params.slug },
+            req.body
+        );
+    } catch (error) {
+        return res.redirect('/admin/' + req.params.slug + '/editar');
+    };
+    
+    res.redirect('/produtos');
+};
+
+//  APAGAR PRODUTO.
+export const deleteAction = async (req: Request, res: Response) => {
+
+    try {
+        await productSchema.deleteOne({ slug: req.params.slug });
+    } catch (error) {
+        return res.redirect('/admin/' + req.params.slug + '/editar');
+    };
+
     res.redirect('/produtos');
 };

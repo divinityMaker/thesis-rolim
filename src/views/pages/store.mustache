@@ -1,0 +1,21 @@
+{{>partials/header}}
+<section>
+
+<div class="main-content">
+<div class="container">
+    {{#produtos}}
+        <div class="exposure-mold">
+            <h1></h1>
+            {{#photo}}
+            <img src="/src/../uploads/{{photo}}"/>
+            {{/photo}}
+            <h3><a href="/produtos/{{slug}}">{{tittle}}</a></h3>
+            <p>{{body}}</p>
+            <a href="/admin/{{slug}}/editar">[ editar ]</a>
+            <hr/>
+        </div>
+    {{/produtos}}
+</div>
+</div>
+</section>
+{{>partials/javascript}}

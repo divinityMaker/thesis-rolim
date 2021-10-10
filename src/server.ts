@@ -7,21 +7,22 @@ import adminRoutes from './routes/admin';
 import { mongoConnect } from './database/mongo';
 import { urlencoded } from 'body-parser';
 
-dotenv.config();
+dotenv.config(); // CARREGA O CONTEÚDO DO dotENV.
 
-mongoConnect(); //CONECTANDO AO BANCO DE DADOS
+mongoConnect(); // CONECTANDO AO BANCO DE DADOS.
 
 const server = express();
 
-server.set('view engine', 'mustache');
-server.set('views', path.join(__dirname, 'views'));
-server.engine('mustache', mustache());
+server.set('view engine', 'mustache'); // DEFININDO O MOTOR VISUAL.
+server.set('views', path.join(__dirname, 'views')); // CAMINHO DOS ARQUIVOS.
+server.engine('mustache', mustache()); // MOTOR VISUAL.
 
-server.use(express.static(path.join(__dirname, '../public')));
+server.use(express.static(path.join(__dirname, '../src/public'))); // PASTA ESTÁTICA.
 
-server.use(urlencoded({extended: true}));
+server.use(express.json());
+server.use(urlencoded({extended: true})); // QUERYSTRING PARSING.
 
-//ROTAS
+    // ROTAS
 server.use(mainRoutes);
 server.use(adminRoutes);
 
@@ -33,4 +34,4 @@ const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
     res.status(400); // BAD REQUEST
 }
 
-server.listen(process.env.PORT);
+server.listen(process.env.PORT); // INICIANDO O SERVIDOR LOCAL.

@@ -1,0 +1,264 @@
+/* NAVBAR */
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    width: 1px;
+}
+body::-webkit-scrollbar-thumb:vertical {
+    border-radius: 3px;
+    background: #000000;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+    background-size: 2px 1px;
+    border-radius: 3px;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    transition: background-color .5s ease;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0);
+}
+
+.nav-container{
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+
+.nav-medias{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    right: 90px;
+    top: 2.5rem;
+}
+
+
+.nav-medias li{
+    list-style: none;
+    margin: 0 5px;
+}
+
+.nav-medias li a{
+    position: relative;
+    right: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    transition: 0.5s;
+}
+
+.nav-medias li a:hover{
+    color: #000;
+}
+
+.nav-medias li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.nav-medias li:nth-child(1) a:before{
+    background: #3b5998;
+}
+
+.nav-medias li:nth-child(2) a:before{
+    background: #c32aa3;
+}
+
+
+.nav-medias li:nth-child(3) a:before{
+    background: #34af23;
+}
+
+
+.nav-medias li a:hover:before{
+    transform: scale(1);
+}
+
+.footer-nav-medias li:nth-child(1) a:before{
+    background: #3b5998;
+}
+
+.nav{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    transition: height .5s ease;
+}
+
+.nav a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.8rem;
+}
+
+.nav .logo{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.logo{
+    position: absolute;
+    left: 5vw;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    margin-right: auto;
+    margin-left: 25rem;
+}
+
+.nav-link{
+    margin: 0 2rem;
+    position: relative;
+}
+
+.nav-link::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease;
+}
+
+.nav-link:hover::after{
+    transform: scaleX(1);
+}
+
+#nav-cta{
+    display: inline-block;
+    background-color: #fff;
+    color: #313131;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    transition: background-color .5s ease;
+}
+
+#nav-cta:hover{
+    background-color: #d3d3d3;
+}
+
+/* FIM DO CONTEUDO DA NAVBAR */
+
+
+/*EFEITO COM ROLAGEM*/
+
+.scrolling-active{
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+}
+
+.scrolling-active .nav{
+    height: 6.6rem;
+}
+
+.scrolling-active .nav a{
+    color: #313131;
+}
+
+.scrolling-active #nav-cta{
+    background-color: #313131;
+    color: #fff;
+}
+
+.scrolling-active #nav-cta:hover{
+    background-color: #151515;
+}
+
+.scrolling-active .nav-link::after{
+    background-color: #313131;
+}
+
+.scrolling-active .nav-medias li a {
+    color: #313131;
+}
+
+.scrolling-active .nav-medias li a:hover{
+    color: #fff;
+}
+
+.scrolling-active .nav-medias li:nth-child(1) a:before{
+    background: #3b5998;
+}
+
+.scrolling-active .nav-medias li:nth-child(2) a:before{
+    background: #c32aa3;
+}
+
+.scrolling-active .nav-medias li:nth-child(3) a:before{
+    background: #34af23;
+}
+
+.scrolling-active .mobile-menu::before{
+    background: #05060f;
+    box-shadow: 0 10px 0 #05060f;
+}
+
+.scrolling-active .mobile-menu.active::before{
+    background: #05060f;
+    box-shadow: 0 0 0 #fff;
+}
+
+.scrolling-active .mobile-menu::after{
+    background: #05060f;
+}
+
+
+
+
+
+.scrolling-active .nav-medias{
+    top: 0.7rem;
+}
+
+/* FIM DO EFEITO DE ROLAGEM */
