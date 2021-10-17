@@ -13,6 +13,10 @@ type productsType = {
         type : string,
         trim : true
     },
+    price : {
+        type : string,
+        trim : true
+    }
     tag : {
         type : string,
         trim : true,
@@ -29,6 +33,10 @@ const productSchema = new Schema<productsType>({
     },
     slug : String,
     body : {
+        type : String,
+        trim : true
+    },
+    price : {
         type : String,
         trim : true
     },

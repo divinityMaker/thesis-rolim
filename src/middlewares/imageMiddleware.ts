@@ -57,6 +57,6 @@ export const resize = async (req: Request, res: Response, next: NextFunction) =>
 
     const photo = await jimp.read(req.file.buffer);
     photo.resize(177, 177);
-    photo.write('./src/public/uploads/'+filename);
+    photo.write('public/uploads/'+filename);
     next(); 
 }

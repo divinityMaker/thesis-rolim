@@ -9,13 +9,13 @@ export const home = (req: Request, res: Response) => {
     });
 };
 
-//  PÁGINA DE PRODUTOS.
+// PÁGINA DE PRODUTOS.
 export const store = async (req: Request, res: Response) => {
     //  CONSULTA OS PRODUTOS NO DATABASE.
-    const produtos = await productSchema.find({}).sort({tittle: 1}).limit(18);
-    res.render('pages/store', { 
-        menu: createMenuObject('products'), 
-        produtos 
+    const produtos = await productSchema.find({}).sort({ tittle: 1 }).limit(18);
+    res.render('pages/store', {
+        menu: createMenuObject('products'),
+        produtos
     });
 };
 
@@ -33,25 +33,30 @@ export const about = (req: Request, res: Response) => {
     });
 };
 
-//  PÁGINA DE CRIAÇÃO.
+// PÁGINA DE CRIAÇÃO.
 export const create = (req: Request, res: Response) => {
     res.render('pages/createPage');
 };
 
-//  PÁGINA ÚNICA DE CADA PRODUTO.
+// PÁGINA ÚNICA DE CADA PRODUTO.
 export const individualPage = async (req: Request, res: Response) => {
     //  CONSULTA O DATABASE PARA ACESSO VIA SLUG.
     const produtos = await productSchema.findOne({ slug: req.params.slug });
     res.render('pages/individualPage', { produtos: produtos });
 };
 
-//  PÁGINA DE EDIÇÃO.
+// PÁGINA DE EDIÇÃO.
 export const edit = async (req: Request, res: Response) => {
     const produtos = await productSchema.findOne({ slug: req.params.slug });
     res.render('pages/editPage', { produtos: produtos });
 };
 
-//  PÁGINA DE ADMIN.
+// PÁGINA DE LOGIN.
 export const adminLogin = async (req: Request, res: Response) => {
     res.render('pages/adminLogin');
+};
+
+// PAINEL.
+export const adminDashboard = async (req: Request, res: Response) => {
+    res.render('pages/adminDashboard');
 };

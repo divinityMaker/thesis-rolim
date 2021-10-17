@@ -11,6 +11,5 @@ export const createMenuObject = (activeMenu: MenuOptions) => {
     if(activeMenu !== ''){
         returnObject[activeMenu] = true;
     }
-
     return returnObject
 }

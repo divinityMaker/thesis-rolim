@@ -1,33 +1,43 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    // [IMPORTS] \\
+// [IMPORTS] \\
 import { Router } from 'express';
 import multer from 'multer';
 
-    // [MIDDLEWARES] \\
-import { multerConfig, resize } from '../middlewares/imageMiddleware'; 
+// [MIDDLEWARES] \\
+import { multerConfig, resize } from '../middlewares/imageMiddleware';
+import { auth } from '../middlewares/auth';
 
-    // [CONTROLLERS] \\
+// [CONTROLLERS] \\
 import * as storeController from '../controllers/storeController';
 import * as pageController from '../controllers/pageController';
+import * as userController from '../controllers/userController';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    // [ROUTER] \\ 
+// [ROUTER] \\ 
 const adminRouter = Router();
 
-    // [ROTAS] \\
-adminRouter.get('/admin', pageController.adminLogin)
+// [ROTAS] \\
+adminRouter.get('/admin', pageController.adminLogin);
+adminRouter.post('/admin', userController.loginAction);
 
-adminRouter.get('/admin/criar', pageController.create); // PÁGINA DE CRIAÇÃO.
-adminRouter.post('/admin/criar', multer(multerConfig).single('photo'), // MULTER CONFIG.
-                                 resize, // MIDDLEWARE PARA DAR RESIZE NA FOTO.
-                                 storeController.createAction); // AÇÃO DE CRIAR PRODUTO.
+adminRouter.get('/admin/dashboard', pageController.adminDashboard);
 
-adminRouter.get('/admin/:slug/editar', pageController.edit); // PÁGINA DE EDIÇÃO.
-adminRouter.post('/admin/:slug/editar', storeController.editAction); // AÇÃO DE EDIÇÃO.
+adminRouter.get('/admin/criar', auth.private,
+    pageController.create); // PÁGINA DE CRIAÇÃO.
+adminRouter.post('/admin/criar', auth.private,
+    multer(multerConfig).single('photo'), // MULTER CONFIG.
+    resize, // MIDDLEWARE PARA DAR RESIZE NA FOTO.
+    storeController.createAction); // AÇÃO DE CRIAR PRODUTO.
 
-adminRouter.post('/admin/:slug/deletar', storeController.deleteAction); // AÇÃO DE DELETAR.
+adminRouter.get('/admin/:slug/editar', auth.private,
+    pageController.edit); // PÁGINA DE EDIÇÃO.
+adminRouter.post('/admin/:slug/editar', auth.private,
+    storeController.editAction); // AÇÃO DE EDIÇÃO.
 
-    // [EXPORTS] \\
+adminRouter.post('/admin/:slug/deletar', auth.private,
+    storeController.deleteAction); // AÇÃO DE DELETAR.
+
+// [EXPORTS] \\
 export default adminRouter;
