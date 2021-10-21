@@ -1,5 +1,3 @@
-/* NAVBAR */
-
 *,
 *::before,
 *::after{
@@ -34,20 +32,46 @@ html{
 
 header{
     width: 100%;
-    position: sticky;
+    height: 6.6rem;
+    position: fixed;
     top: 0;
     left: 0;
     transition: background-color .5s ease;
     z-index: 1000;
-    border-bottom: 1px solid rgba(0, 0, 0);
+    background: #fff;
 }
 
-.nav-container{
+.container{
     width: 100%;
     max-width: 120rem;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
+
+.whatsapp-sup{
+    position: fixed;
+    bottom: 4rem;
+    right: 5rem;
+    z-index: 1000;
+    background-color: #25d366;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.whatsapp-sup a{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 8px;
+    font-size: 35px;
+    color: #fff;
+    text-align: center;
+}
+/* NAVBAR */
+
+
 
 
 .nav-medias{
@@ -56,7 +80,8 @@ header{
     display: flex;
     position: absolute;
     right: 90px;
-    top: 2.5rem;
+    top: 1em;
+
 }
 
 
@@ -81,7 +106,7 @@ header{
 }
 
 .nav-medias li a:hover{
-    color: #000;
+    color: #fff;
 }
 
 .nav-medias li a:before{
@@ -98,35 +123,37 @@ header{
     transition: 0.5s;
 }
 
-.nav-medias li:nth-child(1) a:before{
+.nav-medias .fb a:before{
     background: #3b5998;
 }
 
-.nav-medias li:nth-child(2) a:before{
+.nav-medias .inst a:before{
     background: #c32aa3;
 }
 
-
-.nav-medias li:nth-child(3) a:before{
-    background: #34af23;
+.nav-medias .icon a:before{
+    background: #444444;
 }
+
+.search-box.active .icon a:before{
+    background: #fff;
+}
+
+
 
 
 .nav-medias li a:hover:before{
     transform: scale(1);
 }
 
-.footer-nav-medias li:nth-child(1) a:before{
-    background: #3b5998;
-}
 
 .nav{
     width: 100%;
-    height: 10rem;
+    height: 6.6rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
     transition: height .5s ease;
 }
 
@@ -162,7 +189,7 @@ header{
     content: '';
     width: 100%;
     height: 2px;
-    background-color: rgb(0, 0, 0);
+    background-color: #fff;
     position: absolute;
     left: 0;
     bottom: -3px;
@@ -191,74 +218,24 @@ header{
 /* FIM DO CONTEUDO DA NAVBAR */
 
 
-/*EFEITO COM ROLAGEM*/
-
-.scrolling-active{
-    background-color: #fff;
-    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+/* SESSÃO PRINCIPAL */
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: url("/img/banner.JPEG  ") center no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
 }
 
-.scrolling-active .nav{
-    height: 6.6rem;
+.hero::after{
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
 }
 
-.scrolling-active .nav a{
-    color: #313131;
-}
-
-.scrolling-active #nav-cta{
-    background-color: #313131;
-    color: #fff;
-}
-
-.scrolling-active #nav-cta:hover{
-    background-color: #151515;
-}
-
-.scrolling-active .nav-link::after{
-    background-color: #313131;
-}
-
-.scrolling-active .nav-medias li a {
-    color: #313131;
-}
-
-.scrolling-active .nav-medias li a:hover{
-    color: #fff;
-}
-
-.scrolling-active .nav-medias li:nth-child(1) a:before{
-    background: #3b5998;
-}
-
-.scrolling-active .nav-medias li:nth-child(2) a:before{
-    background: #c32aa3;
-}
-
-.scrolling-active .nav-medias li:nth-child(3) a:before{
-    background: #34af23;
-}
-
-.scrolling-active .mobile-menu::before{
-    background: #05060f;
-    box-shadow: 0 10px 0 #05060f;
-}
-
-.scrolling-active .mobile-menu.active::before{
-    background: #05060f;
-    box-shadow: 0 0 0 #fff;
-}
-
-.scrolling-active .mobile-menu::after{
-    background: #05060f;
-}
-
-
-
-
-
-.scrolling-active .nav-medias{
-    top: 0.7rem;
-}
-
-/* FIM DO EFEITO DE ROLAGEM */
+/* FIM DA SESSÃO PRINCIPAL */
