@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolim | {{produtos.tittle}}</title>
+
+    <link rel="stylesheet" href="../../assets/styles/productStyles/individual/productPage.css">
+    <link rel="stylesheet" href="../../assets/styles/productStyles/individual/productPageMobile.css">
+</head>
+<body>
+    <section class="containerProduct">
+    {{#produtos}}
+        <a class="buttonClose" href="/produtos"><i class="fas fa-times"></i></a>
+        <div class="imageProduct">
+            <img src="/uploads/{{photo}}" alt="">
+        </div>
+        <div class="infoProduct">  
+            <div class="tittle">
+                <span></span>
+                <h1><a href="/produtos/{{slug}}">{{tittle}}</a></h1>
+            </div>
+                <div class="desc">
+                    <h1>Sobre</h1>
+                    <p>{{body}}</p>
+                </div>  
+            <div class="price">
+                <h1>R$: {{price}}</h1>
+                <div class="button">
+                    <a class="nav-link" href="https://api.whatsapp.com/send?=pt_br&phone=+5514997836917&text=Olá,%20estou%20interessado%20em%20um(a)%20{{tittle}},%20gostaria%20de%20conhecer%20mais%20sobre.">Tenho interesse</a>
+                </div>
+            </div>
+        </div>
+    {{/produtos}}
+    </section>
+
+    
+    <script src="https://kit.fontawesome.com/6bb7bca18b.js" crossorigin="anonymous"></script>
+</body>
+</html>

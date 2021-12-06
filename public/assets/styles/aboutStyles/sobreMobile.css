@@ -1,0 +1,62 @@
+@media screen and (max-width: 1024px ){ 
+
+    /* CSS DA MALO */
+
+    .timeline{
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    .all__content{
+        font-size: 1.7em;
+    }
+
+    .content--text h2{
+        margin-left: 0vw;
+        margin-bottom: 1vw;
+        border: none;
+    }
+
+    .all_content p{
+        margin-bottom: 3vw;
+        }
+    
+   .cont-1{
+        margin: 0vw 3vw 5vw 2vw;
+        text-indent: 0vw;
+        width: auto;
+        line-height: 1.4;
+    }
+
+    
+    .img01{
+        margin: 0vw -3vw 0vw -2vw;
+    }
+    .cont-2{
+        margin: 3vw 3vw 5vw 2vw;
+        text-indent: 0vw;
+        width: auto;
+        line-height: 1.3;
+    }
+
+    .img02{
+        margin: 0vw -3vw 2vw -2vw;
+    }
+    .cont-3{
+        margin: 3vw 3vw 5vw 2vw;
+        text-indent: 0vw;
+        width: auto;
+        line-height: 1.3;
+    }
+
+
+    /*timeline */
+
+    .timeline__title h2{
+        margin: 0vw 0vw 0vw 2.5vw;
+    }
+
+    .timeline__component--bg{
+        padding: 0.8em;
+    }
+}

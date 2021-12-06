@@ -1,0 +1,234 @@
+@media screen and (max-width: 1024px ){ 
+
+
+    /* SESSÃO PRINCIPAL */
+    
+    .hero h1{
+        font-size: 2em;
+        top: 40%;
+    }
+    .hero p{
+        font-size: 3em;
+        top: 40%;
+    }   
+    
+    .slidebottom{
+        display: block;
+        position: relative;
+        text-align: center;
+        z-index: 10;
+    
+    }
+    
+    
+    .slidebottom a i{
+        display:none;
+    
+    }
+    
+    .slidebottom a img{
+        display: inline;
+    }
+    
+    .slidebottom img{
+        width: 12em;
+        height: auto;
+      
+     }
+    
+    
+    /* SESSÃO MODELOS */
+    
+    .modelstittle h1{
+        font-size: 3rem;
+    }
+    
+    .modelstittle p{
+        position: relative;
+        top: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .titulo-modelos{
+        top: 4em;
+     }
+    
+    .subtitulo-modelos{
+        top: 1em;
+    }
+    
+    .glider div{ 
+        margin: 0rem;
+    }
+    
+    .maps-visit h1{
+        margin-top: 20px;
+        font-family: Lato;
+        font-size: 1.5em;
+        text-transform: uppercase;
+    
+    }
+    
+    .spacemobile{
+        position: relative;
+        top: 2em;
+    
+    }
+    
+    .subglider div{ 
+        margin: 0rem;
+    }
+    
+    .subglider div{
+        width: 10%;
+        height: 25%;
+    }
+    
+    .about-modelos img{
+        width: 35%;
+        height: auto;
+    }
+    
+    /* SESSÃO DE REVENDEDORES */
+    
+    
+    .modelstittle h1{
+        font-family: 'Roboto', sans-serif;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+    }
+    
+    .modelstittle p{
+        position: relative;
+        top: 2rem;
+        font-size: 1.8rem;
+    }
+    
+    
+    .lojatittle{
+        position: relative;
+        top: 4rem;
+        width: 100vw;
+        height: 22rem;
+        background: #050303;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .lojatittle a{
+        color: #fff;
+        font-size: 7rem;
+        position: relative;
+        left: 0;
+    }
+    
+    .lojatittle h1{
+        position: relative;
+        left: 0;
+        padding-top: 0.1em;
+        font-family: 'Roboto', sans-serif;
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: #fff;
+        cursor: default;  
+    }
+    
+    .lojatittle h2{
+        position: relative;
+        left: 0;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: #fff;
+        cursor: default;  
+    }
+    
+    
+    .lojatittle p{
+        position: relative;
+        left: 0;
+        top: 1.5em;
+        right: 1vw;
+        font-size: 1.7rem;
+        color: #cfcfcf;
+        cursor: default; 
+        text-align: center;
+    }
+    
+    .lojas-spoiler{
+        top: 0;
+    }
+    
+    
+    /* FIM DA SESSÃO DE REVENDEDORES */
+    
+    }
+    
+    /* SESSÃO SOBRE */
+    @media screen and (max-width: 1200px) {
+        .inner-container{
+            padding: 80px;
+        }
+    }
+    
+    @media screen and (max-width: 1000px) {
+    
+    
+        .about-section{
+            background-size: 0;
+    
+        }
+    
+        .inner-container{
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .about-section{
+            background-size: 0%;
+        }
+    
+        .inner-container{
+            padding: 60px;
+        }
+    
+        .skills{
+            font-size: 1.5em;
+        }
+    }
+    
+    @keyframes fadeVisibility {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+          transform: opacity ;
+        }
+      }
+    
+      @keyframes flow{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes navLinkFade{
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    

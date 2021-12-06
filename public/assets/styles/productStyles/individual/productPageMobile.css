@@ -1,0 +1,56 @@
+@media screen and (max-width: 999px) {
+
+    body{
+        background-color: #fff;
+    }
+    
+    .buttonClose{
+        top: -1em;
+        left: 90%;
+    }
+    .containerProduct{ 
+        top: 5em;
+        left: 10%;
+        display: block;
+        background-color: #fff;
+    }
+
+    .imageProduct{
+        width: 100%;
+        left: 0;
+    }
+
+    .infoProduct{
+        top: 1em;
+    }
+
+    .containerProduct{
+        height: 70em;
+    }
+
+    .tittle span{
+        display: none;
+    }
+    
+    .tittle{
+        padding-left: 3em;
+        text-align: center;
+    }
+
+    .tittle h1 a{
+        font-size: 2em;
+    }
+
+    .desc{
+        padding-left: 0.1em;
+    }
+
+    .desc p{
+        width: 100%;
+    }
+
+    .price{
+        padding-left: 2em;
+    }
+}
+

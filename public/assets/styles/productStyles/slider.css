@@ -1,0 +1,61 @@
+* {box-sizing:border-box}
+
+.slideshow-container {
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+}
+
+.mySlides {
+  display: none;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.filterButton{
+  font-family: Cursivee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: absolute;
+  background: black;
+  color: white;
+  font-weight: bolder;
+  font-size: 42px;
+  width: 1400px;
+  height: 550px;
+  opacity: 0.5;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.filterButton:hover{
+  cursor: pointer;
+}

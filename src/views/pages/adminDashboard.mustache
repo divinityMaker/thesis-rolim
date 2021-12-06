@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rolim | Dashboard</title>
+
+        <link rel="stylesheet" href="../assets/styles/adminStyles/dashboard.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <div class="navLogo">
+                    <a href=""><img src="../assets/images/marcaBranca.png"></a>
+                </div>
+                <div class="navOptions">
+                    <ul>
+                        <li class="return">
+                            <i class="fas fa-undo-alt"></i>
+                            <a href="/" class="nav-link">RETORNAR AO SITE</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-plus"></i>
+                            <a href="/admin/criar" class="nav-link">ADICIONAR PRODUTO</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="dashboardInfo">
+                <div class="dashboardPhrase">
+                    <h2>PAINEL DE CONTROLE</h2>
+                </div>
+                <div class="info">
+                    <div class="infoBox">
+                        <div class="boxText">
+                            <p>PRODUTOS INSERIDOS</p>
+                            <h2>{{quantidade}}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-produtos">
+                    <div class="produtos">
+                        {{#items}}
+                        <div class="prodCont">
+                            <div class="prodCard">
+                                {{#photo}}
+                                    <img src="/src/../uploads/{{photo}}"/>
+                                {{/photo}}
+                                <div class="info">
+                                    {{#tittle}}
+                                        {{tittle}}
+                                    {{/tittle}}
+                                </div>
+                                <div class="edit">
+                                <form method="GET" action="/admin/{{slug}}/editar">
+                                    <button class="myButton" type="submit">Editar</button>
+                                </form>
+                                <form method="POST" action="/admin/{{slug}}/deletar">
+                                    <button class="myButton2" type="submit">Apagar</button>
+                                </form>
+                                </div>        
+                            </div>
+                        </div>
+                        {{/items}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/6bb7bca18b.js" crossorigin="anonymous"></script>
+    </body>
+</html>

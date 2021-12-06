@@ -1,0 +1,178 @@
+@font-face {
+    font-family: Lato;
+    src: url(../../../fonts/Lato-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Lato;
+
+}
+
+body{
+    background-color: #dddddd;
+}
+
+.containerProduct{ 
+    position: absolute;
+    top: 5em;
+    left: 10%;
+    width: 80vw;
+    height: 35em;
+    background-color: #f1f1f1;
+    display: flex;
+    border-radius: 15px;
+    cursor: initial;
+    
+}
+
+
+.buttonClose{
+    position: relative;
+    top: 1em;
+    left: 90%;
+    color: #000;
+    font-size: 1.5em;
+}
+
+
+.imageProduct{
+    position: relative;
+    width: 70%;
+    height: auto;
+    cursor: default;
+    left: -1em;
+}
+
+.imageProduct img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;    
+}
+
+.infoProduct{
+    position: relative;
+    top: 5em;
+    width: 100%;
+    height: auto;
+    padding-left: 0em;
+    cursor: default;
+}
+
+.tittle{
+    display: flex;
+    padding-left: 5em;
+    width: 80%;
+}
+
+.tittle h1 a{ 
+    font-size: 3em;
+    padding-left: 0.1em;
+    line-height: 0.8em;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    color: #000;
+    
+}
+
+.tittle span{
+    position: relative;
+    top: 2.6em;
+    width: 3vw;
+    height: 0px;
+    border: 1px solid #000;
+}
+
+.desc{
+    position: relative;
+    padding-left: 8em;
+}
+
+
+.desc h1{
+    font-size: 1em;
+    text-transform: uppercase;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.desc p{
+    width: 80%;
+    font-size: 1em;
+    color: #414141;
+    padding-bottom: 0.5em;
+    text-align: justify;
+}
+
+.price{
+    position: relative;
+    top: 2em;
+    display: flex;
+    padding-left: 8em;
+    
+}
+
+.price h1{
+    color: #008000;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.price h1{
+    padding-left: 0.2em;
+    font-size: 1em;
+}
+
+.button{
+    padding-left: 2em;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #414141;
+    cursor: pointer;
+}
+
+.button a{
+    text-decoration: none;
+    color: #000;
+}
+
+.button:hover{
+    color: #000;
+}
+
+.nav-link{
+    position: relative;
+}
+
+.nav-link::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #008000;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .8s ease;
+}
+
+.nav-link:hover::after{
+    transform: scaleX(1);
+}
+
+#nav-cta{
+    display: inline-block;
+    background-color: #fff;
+    color: #313131;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    transition: background-color .5s ease;
+}
+
+#nav-cta:hover{
+    background-color: #d3d3d3;
+}
+
+

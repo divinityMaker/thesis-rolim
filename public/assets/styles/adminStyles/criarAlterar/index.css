@@ -1,0 +1,153 @@
+@font-face {
+    font-family: Lato;
+    src: url(fonts/Lato-Regular.ttf);
+}
+
+.navLogo img{
+    width: 6em;
+    height: auto;
+}
+
+/* Parte de add produto */
+
+body{
+    background: url("/assets/images/backgroundOp.jpg") no-repeat;
+    background-size: cover;
+    ;
+}
+
+.containerProduct{
+    left:40%;
+    top:30%;
+    margin-left:-100px;
+    margin-top:-50px;
+    position:absolute;
+    width: 30em; 
+    height:auto; 
+    padding-bottom: 2em;
+	background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px #000;
+    border-radius: 5%;
+    z-index: 0;
+    text-align: center;
+    color: #fff; 
+    font-family: Lato; 
+}
+
+.page a{
+    position: relative;
+    top: -1.9em;
+    left: 8em;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+
+input{
+    position: relative;
+    margin-left: 10px;
+    width: 15em;
+
+}
+
+textarea{
+    width: 15em;
+    margin-left: 10px;
+    resize: none;
+}
+
+.corpo {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corpo p{
+    position: relative;
+    top: -25px;
+}
+
+.file{
+    width: auto;
+}
+
+.tittle{
+    position: relative;
+    left: -2px;
+}
+
+.body{
+    position: relative;
+    left: -4px;
+    height: 10vh;
+}
+
+.price{
+    position: relative;
+    left: -2px;
+}
+
+.tags{
+    position: relative;
+    left: 3px;
+}
+
+.myButton {
+    width: 6.5em;
+	background-color:#ffffff00;
+	border-radius:28px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#fff;
+	font-family:Arial;
+	font-size:17px;
+	padding:8px 0px;
+	text-decoration:none;
+
+    transition: 0.5s;
+    
+}
+.myButton:hover {
+	background-color:#ffffff;
+    color:#000;
+
+    transition: 0.5s;
+    transform: scale(1.05);
+
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+/* Parte Add produto */
+
+
+textarea{
+    width: 15em;
+    height: 12em;
+    resize: none;
+}
+
+.editSave{
+    padding-bottom: 25px;
+}
+
+.editSave .myButton:nth-child(1):hover{
+    background-color: rgb(4, 134, 4);
+    color: #fff;
+}
+
+.editSave .myButton:nth-child(2):hover{
+    background-color: rgb(134, 4, 4);
+    color: #fff;
+}
+
+
+
+
+
+

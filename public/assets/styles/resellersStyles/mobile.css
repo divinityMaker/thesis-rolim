@@ -1,0 +1,28 @@
+@media screen and (max-width: 1024px ){ 
+
+.img01{
+        width: 100vw;
+        height: 100vh;
+    }
+
+.img02{
+    width: 100vw;
+    height: 100vh;
+}
+
+.img03{
+    width: 100vw;
+    height: 100vh;
+ }
+
+ .title{
+     top: 15em;
+ }
+
+ .revend{
+     padding-top: 2em;
+ }
+
+}
+
+

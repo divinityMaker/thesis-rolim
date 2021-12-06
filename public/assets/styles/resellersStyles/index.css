@@ -1,0 +1,136 @@
+
+/* SESSÃO PRINCIPAL */
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    display: inline-block;
+    flex-flow: row;
+    overflow-x: auto;
+    height: 40em;
+    width: auto;
+    background-color: black;
+}
+
+/* Hide the images by default */
+.mySlides .fade {
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+}
+
+/* Fading animation */
+.fade {
+    background-color: black;
+    animation-name: fade;
+    animation-duration: 2.0s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .5} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .5} 
+    to {opacity: 1}
+  }
+
+.img {
+    width: 100vw;
+    height: auto;
+    text-align: center;
+    opacity: 0.75;;
+}
+
+.title {
+    margin: 0 auto;
+    width: 100vw;
+    display: inline-block;
+    position: absolute;
+    top: 18em;
+    z-index: 100;
+}
+
+.img01{
+    width: 100vw;
+    height: 54vh;
+    background: url("../../images/lojas/slider/hpg_loja.jpg") center center no-repeat;
+    background-size: cover;
+    opacity: 0.75;
+    overflow-y: hidden;
+}
+
+.img02{
+    width: 100vw;
+    height: 54vh;
+    background: url("../../images/lojas/slider/hpg_loja_02.jpg") center center no-repeat;
+    background-size: cover;
+    opacity: 0.75;
+    overflow-y: hidden;
+}
+
+.img03{
+    width: 100vw;
+    height: 54vh;
+    background: url("../../images/lojas/slider/hpg_loja_04.jpg") center center no-repeat;
+    background-size: cover;
+    opacity: 0.75;
+    overflow-y: hidden;
+}
+
+
+.lojas-container{
+    position: relative;
+    top: 5em;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 20em;
+}
+
+.lojas-container h1 {
+    text-align: center;
+    font-family: Lato;
+    font-size: 4.5em;
+    color: #fff;
+    cursor: context-menu;
+}
+
+.lojas-container h2{
+        text-align: left;
+        padding-left: 3vw;
+        font-family: Lato;
+        font-size: 3em;
+}
+
+.lojas-container h3{
+    text-align: left;
+    padding-left: 3vw;
+    padding-top: 10px;
+    font-size: 1.5em;
+}
+
+.loja{
+    margin: 2em;
+    transition: 0.5s;
+}
+
+.revend{
+    padding-top: 8em;
+}
+
+.loja a {
+    padding-top: 150px;
+}
+
+.loja:hover{ 
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/* FIM DA SESSÃO PRINCIPAL */
+
+/* FIM DAS SESSÕES */
+
+   

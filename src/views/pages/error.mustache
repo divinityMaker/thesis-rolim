@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Rolim - Entrar</title>
+     <link rel="stylesheet" href="../assets/styles/adminStyles/index.css">
+ </head>
+ <body>
+ 
+    <div class="main-content">
+        <div class="container">
+            <div class="logo-cont">
+                <img id="whiteLogo" src="../assets/images/marcaBranca.png" alt="">
+            </div>
+                <div class="error">
+                <a class="buttonClose" href="/admin"><i class="fas fa-times"></i></a>
+                <h1>Ocorreu um erro de autenticação, verifique usuário/senha.</h1>
+                </div>
+            <form method="POST" enctype="application/x-www-form-urlencoded">
+                <input type="text" name="username" placeholder="Usuário">
+                <br>
+                <input type="password" name="password" placeholder="Senha">
+                <br>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/6bb7bca18b.js" crossorigin="anonymous"></script>
+ </body>
+ </html>

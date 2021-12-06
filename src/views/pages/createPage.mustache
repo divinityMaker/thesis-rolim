@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolim | Adicionar produto</title>
+
+    <link rel="stylesheet" href="../assets/styles/adminStyles/criarAlterar/index.css">
+</head>
+<body>
+    <div class="containerProduct">
+        <div class="page">
+            <h2>ADICIONAR PRODUTO</h2>
+            <a href="/admin/dashboard"><i class="fas fa-times"></i></a>
+            <form method="POST" enctype="multipart/form-data">
+
+                <label>
+                <input type="file" name="photo" class="file"/>
+                </label>
+
+                <label>
+                    <p>Título:<input class="tittle" type="text" name="tittle" /></p>
+                </label>
+                <label class="corpo">
+                    <p>Corpo:</p><textarea class="body" type="text" name="body"></textarea>
+                </label>
+                <label >
+                        <p>Preço:<input class="price" type="text" name="price" /></p>
+                </label>
+                <label>
+                        <p>Tags:<input class="tags" type="text" name="tag" placeholder="Separar por vírgula."/></p>
+                </label>
+                <input class="myButton" type="submit" value="Criar">
+            </form>
+            </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/6bb7bca18b.js" crossorigin="anonymous"></script>
+</body>
+</html>

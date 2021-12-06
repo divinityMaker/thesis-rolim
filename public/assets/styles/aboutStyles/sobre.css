@@ -1,0 +1,142 @@
+.all_content{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 10em;
+    bottom: 4em;
+    font-size: 1.7em;
+    font-family: Lato;
+    display: block;
+    letter-spacing: 1px;
+    background-color: #fff;
+    text-align: justify;
+    line-height: 1.4em;
+}
+
+.content--title h2{
+    margin-left: 0vw;
+    margin-bottom: 1vw;
+    text-indent: 0vw;
+    border: none;
+}
+
+.inside--title h3{
+    padding-bottom: 0.5vw;
+    margin-top:  1vw;
+}
+
+.cont-1{
+    text-indent: 3vw;
+    margin: 0vw 9vw 0vw 8vw;
+}
+
+
+.img01{
+    width: 100vw;
+    height: 55vh;
+    margin: 0vw -9vw 0vw -8vw;
+    background: url("../../images/bgSobre.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 1em;
+    text-align: center;
+}
+
+.cont-2{
+    text-indent: 3vw;
+    margin: 3vw 9vw 2vw 8vw;
+}
+
+.img02{
+    width: 100vw;
+    height: 55vh;
+    margin: 0vw -9vw 2vw -8vw;
+    background: url("../../images/fab.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+.cont--subtitle {
+    font-weight: bolder;
+    text-indent: 0vw;
+    text-align: justify;
+}
+
+.inside--quote{
+    margin: 0vw 0vw 0vw 3vw;
+    text-indent: 0vw;
+    text-align: justify;
+}
+
+.cont-3{
+    text-indent: 3vw;
+    margin: 3vw 9vw 2vw 8vw;
+}
+
+
+/*TIMELINE */
+
+
+.timeline__title h2{
+    margin-left: 8vw;
+    margin-bottom: 1vw;
+    text-indent: 0vw;
+}
+
+.timeline {
+  margin: 0 auto;
+  max-width: 750px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 3px 1fr;
+  text-align: left;
+}
+
+.timeline__component {
+  margin: -1px 10px 10px 10px;
+}
+
+.timeline__component--bg{
+    padding: 1.2em;
+ /*   background: rgb(210, 255, 234);*/
+    box-shadow: 0 0 2px rgb(0,0,0.2);
+    border-radius: 10px;
+}
+
+.timeline__title{
+    margin: 0px 0px 0px 0px;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.timeline__text{
+    letter-spacing: 1px;
+}
+
+.timeline__date--right {
+    text-align: right;
+    margin-right: 5px;
+  }
+
+.timeline__date {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+
+.timeline__middle {
+  position: relative;
+  background: black;
+}
+
+.timeline__point {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 50%;
+}
