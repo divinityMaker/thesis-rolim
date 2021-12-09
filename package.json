@@ -1,8 +1,8 @@
 {
   "name": "thesis-rolim",
-  "version": "1.0.0",
+  "version": "666",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "engines": {
     "node": "16.x"
   },
